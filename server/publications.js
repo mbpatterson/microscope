@@ -8,5 +8,5 @@ Meteor.publish('comments', function(postId) {
 });
 
 Meteor.publish('notifications', function() {
-  return Notifications.fiend();
+  return Notifications.find();
 });
