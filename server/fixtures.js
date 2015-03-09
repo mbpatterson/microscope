@@ -36,4 +36,15 @@ if (Posts.find().count() === 0) {
     submitted: new Date(now - 3 * 3600 * 1000),
     body: 'Aw yea!'
   });
+
+  for (var i = 0; i < 10; i++) {
+    Posts.insert({
+      title: 'Test post #' + i,
+      author: sacha.profile.name,
+      userId: sacha._id,
+      url: 'http://google.com/?=test' + i,
+      submitted: new Date(now-i * 3600 * 1000),
+      commentsCount: 0
+    });
+  }
 }
